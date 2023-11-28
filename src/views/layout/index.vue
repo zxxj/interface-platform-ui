@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import Menu from '../../components/menu.vue';
 import Header from '../../components/header.vue';
-import { RouterView } from 'vue-router';
+import { RouterView, useRoute } from 'vue-router';
+
+const route = useRoute();
 </script>
 
 <template>
@@ -10,7 +12,7 @@ import { RouterView } from 'vue-router';
       <Menu />
     </a-layout-sider>
     <a-layout>
-      <a-layout-header>
+      <a-layout-header v-if="route.path !== '/interfaceDoc'">
         <Header />
       </a-layout-header>
       <a-layout-content>
@@ -36,5 +38,6 @@ import { RouterView } from 'vue-router';
 .ant-layout-content {
   height: calc(100vh - 100px);
   background-color: #fff;
+  overflow: hidden;
 }
 </style>
