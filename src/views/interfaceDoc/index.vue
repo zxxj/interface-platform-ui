@@ -255,4 +255,14 @@ const handleDocSearch = async () => {
     }
   }
 }
+
+:where(.css-dev-only-do-not-override-1qb1s0s).ant-input-affix-wrapper {
+  border-color: #e3a69e;
+}
+
+:where(.css-dev-only-do-not-override-1qb1s0s).ant-input-affix-wrapper:not(
+    .ant-input-affix-wrapper-disabled
+  ):hover {
+  border-color: #e3a69e;
+}
 </style>

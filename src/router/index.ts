@@ -12,6 +12,10 @@ const router = createRouter({
       component: () => import('../views/layout/index.vue'),
       children: [
         {
+          path: '/home',
+          component: () => import('../views/home/index.vue'),
+        },
+        {
           path: '/interfaceDoc',
           component: () => import('../views/interfaceDoc/index.vue'),
         },
